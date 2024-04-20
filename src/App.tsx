@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import { Navbar } from './partials';
-import { routes } from './routes';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { Navbar } from './partials'
+import { routes } from './routes'
 
 export default function App() {
     return (
@@ -13,7 +13,7 @@ export default function App() {
 }
 
 function AnimatedRoutes() {
-    const location = useLocation();
+    const location = useLocation()
 
     return (
         <AnimatePresence initial={false} mode='wait'>
@@ -23,5 +23,5 @@ function AnimatedRoutes() {
                 ))}
             </Routes>
         </AnimatePresence>
-    );
+    )
 }
