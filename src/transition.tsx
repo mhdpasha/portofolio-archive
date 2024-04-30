@@ -27,8 +27,7 @@ const Transition = (Component: React.ComponentType) => {
         initial="initial"
         animate="enter"
         exit="exit"
-        variants={variants}
-      >
+        variants={variants}>
         <Component />
       </motion.div>
     )
