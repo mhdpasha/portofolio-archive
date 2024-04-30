@@ -14,16 +14,13 @@ const Cursor: React.FC = () => {
                 const scale = visualViewport?.scale || 1;
                 const offsetX = visualViewport?.offsetLeft || 0;
                 const offsetY = visualViewport?.offsetTop || 0;
-
                 
                 const x = (e.clientX - offsetX) / scale;
                 const y = (e.clientY - offsetY) / scale;
 
-                
                 cursor.style.left = `${x}px`;
                 cursor.style.top = `${y}px`;
 
-                
                 const linkElement = document.elementFromPoint(e.clientX, e.clientY);
                 const isLinkHovering = linkElement?.classList.contains('is-hovering') || false;
                 setIsHovering(isLinkHovering);
