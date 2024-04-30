@@ -72,5 +72,10 @@
     }
     body {
       @apply bg-background text-foreground;
+      cursor: none !important;
+    }
+    .custom-cursor {
+      cursor: none !important;
     }
   }
+  

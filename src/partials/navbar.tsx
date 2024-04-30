@@ -1,19 +1,32 @@
-import { Link } from 'react-router-dom'
-import { routes } from '../routes'
+import { Link } from 'react-router-dom';
+import { routes } from '../routes';
+// import { TbArrowUpRight } from "react-icons/tb";
 
 export default function Navbar() {
-    return(
-      <nav className="bg-gray-900 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-white text-xl font-bold">mhdpasha</Link>
-          <ul className="flex">
-            {routes.map((route, index) => (
-              <li key={index} className="mr-6">
-                <Link to={route.path} className="text-white hover:text-gray-400">{route.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-    )
+
+    const handleMouseEnter = (e: React.MouseEvent) => {
+        e.currentTarget.classList.add('is-hovering');
+    };
+    const handleMouseLeave = (e: React.MouseEvent) => {
+        e.currentTarget.classList.remove('is-hovering');
+    };
+
+    return (
+        <nav className="bg-gray-800 w-24 flex flex-col items-center justify-center h-screen py-4">
+            <ul className="space-y-8 ps-2">
+                {routes.map(({ path, name }, index) => (
+                    <li key={index}>
+                        <Link
+                            to={path}
+                            className="block w-full text-white px-5 py-1 transition-transform duration-300 hover:translate-x-2"
+                            style={{ cursor: 'none' }}
+                            onMouseEnter={handleMouseEnter} 
+                            onMouseLeave={handleMouseLeave} >
+                            {name} 
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    );
 }
