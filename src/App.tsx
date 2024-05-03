@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from '@/components/theme-provider'
 import { Navbar, Layout, View } from './partials'
 import { Cursor, Page } from '.'
 
