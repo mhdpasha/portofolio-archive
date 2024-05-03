@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { routes } from '../routes'
-// import { ModeToggle } from '@/components/mode-toggle'
-// import { TbArrowUpRight } from "react-icons/tb"
+import { ModeToggle } from '@/components/mode-toggle'
+import { TbArrowUpRight } from "react-icons/tb"
 
 export default function Navbar() {
 
