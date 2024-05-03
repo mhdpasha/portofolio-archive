@@ -69,12 +69,10 @@
   @layer base {
     * {
       @apply border-border;
+      cursor: none !important;
     }
     body {
       @apply bg-background text-foreground;
-      cursor: none !important;
-    }
-    .custom-cursor {
       cursor: none !important;
     }
   }

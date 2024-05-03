@@ -34,4 +34,4 @@ const Transition = (Component: React.ComponentType) => {
   }
 }
 
-export default Transition;
+export default Transition

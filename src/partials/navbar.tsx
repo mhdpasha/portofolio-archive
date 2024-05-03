@@ -1,18 +1,20 @@
-import { Link } from 'react-router-dom';
-import { routes } from '../routes';
-// import { TbArrowUpRight } from "react-icons/tb";
+import { Link } from 'react-router-dom'
+import { routes } from '../routes'
+// import { ModeToggle } from '@/components/mode-toggle'
+// import { TbArrowUpRight } from "react-icons/tb"
 
 export default function Navbar() {
 
     const handleMouseEnter = (e: React.MouseEvent) => {
-        e.currentTarget.classList.add('is-hovering');
-    };
+        e.currentTarget.classList.add('is-hovering')
+    }
     const handleMouseLeave = (e: React.MouseEvent) => {
-        e.currentTarget.classList.remove('is-hovering');
-    };
+        e.currentTarget.classList.remove('is-hovering')
+    }
 
     return (
         <nav className="bg-gray-800 w-24 flex flex-col items-center justify-center h-screen py-4">
+
             <ul className="space-y-8 ps-2">
                 {routes.map(({ path, name }, index) => (
                     <li key={index}>
@@ -28,5 +30,5 @@ export default function Navbar() {
                 ))}
             </ul>
         </nav>
-    );
+    )
 }
